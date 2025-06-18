@@ -1,0 +1,202 @@
+.header {
+    background: var(--background);
+    border-bottom: 1px solid var(--gray-200, #D9D9D6);
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    gap: 2rem;
+}
+
+.logoGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 160px;
+}
+
+.logo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.logoText {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--foreground);
+    font-family: var(--font-fellix);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.navLink {
+    color: var(--foreground);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 320px;
+    justify-content: flex-end;
+}
+
+.phone {
+    font-size: 0.875rem;
+    color: var(--gray-50);
+    display: none;
+}
+
+.contact {
+    font-size: 0.875rem;
+    color: var(--gray-50);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: none;
+}
+
+.contact:hover {
+    color: var(--primary);
+}
+
+.login,
+.languageSelect {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+}
+
+.login {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.login:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.languageSelect {
+    border: 1px solid var(--gray);
+    outline: none;
+    background: var(--white);
+}
+
+.tryButton {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    transition: background 0.2s;
+}
+
+.tryButton:hover {
+    background: var(--primary-dark);
+}
+
+.divider {
+    width: 100vw;
+    height: 1px;
+    background: var(--gray-200, #D9D9D6);
+    margin: 0;
+    border: none;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+    .phone,
+    .contact {
+        display: inline;
+    }
+}
+
+.mobileHeader {
+    display: none;
+}
+
+@media (max-width: 374px) {
+    .mobileHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        background: var(--background);
+    }
+    .logoGroup {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .mobileNav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--background);
+        border-radius: 0.5rem;
+    }
+
+
+    .menuButton {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .actions,
+    .divider,
+    .container,
+    .nav {
+        display: none !important;
+    }
+}
+
+
+
