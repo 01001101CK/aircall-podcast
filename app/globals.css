@@ -3,24 +3,60 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #00B388;
+  --primary-dark: #101820;
+  --primary-light: #ECECEA;
+  --secondary: #333333;
+  --secondary-light: #D0D0D0;
+  --secondary-lighter: #EEEFEF;
+  --black: #000000;
+  --gray: #D9D9D6;
+  --gray-50: #D9D9D680; 
+  --accent: #E68354;
+  --accent-light: #FFF0E8;
+  --white: #FFFFFF;
+  --white-70: #FFFFFFB3; 
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .font-regular {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-regular-italic {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .font-medium {
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .font-semibold {
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .font-bold {
+    font-weight: 700;
+    font-style: normal;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-fellix);
+    background: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
 }
