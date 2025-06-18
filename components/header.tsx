@@ -37,7 +37,7 @@ export default function Header() {
                             <Link href="#" className={styles.mobileNavLink}>Why Aircall</Link>
                             <Link href="#" className={styles.mobileNavLink}>Solutions</Link>
                             <Link href="#" className={styles.mobileNavLink}>Pricing</Link>
-                            <Link href="#" className={styles.mobileNavLink}>Ressources</Link>
+                            <Link href="#" className={styles.mobileNavLink}>Resources</Link>
                             <Link href="#" className={styles.mobileNavLink}>Partners</Link>
                             <Link href="#" className={styles.mobileNavLink}>Company</Link>
                         </nav>
