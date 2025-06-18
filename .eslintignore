@@ -1,6 +1,0 @@
-.next
-dist
-node_modules
-public
-coverage
-pnpm-lock.yaml
