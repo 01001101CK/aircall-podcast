@@ -1,0 +1,67 @@
+.searchBarContainer {
+  width: 100vw;
+  min-height: 85px;
+  background: var(--background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.filterNav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1 1 auto;
+  justify-content: center;
+  max-width: 853px;
+  margin-right: 5rem;
+}
+
+.filterLink {
+  color: var(--secondary-medium);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 24px;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: var(--font-fellix);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.filterLinkActive {
+  color: var(--foreground, #171717);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-fellix);
+}
+
+.downArrow {
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  color: var(--secondary, #333333);
+}
+
+.searchButton {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.searchButton img,
+.searchButton svg {
+  width: 28px;
+  height: 28px;
+  color: var(--primary, #00B388);
+} 

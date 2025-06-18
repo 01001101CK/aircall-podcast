@@ -44,10 +44,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-secondary: #F7F8FC;
   --primary: #00B388;
   --primary-dark: #101820;
   --primary-light: #ECECEA;
   --secondary: #333333;
+  --secondary-medium: #5C6266;
   --secondary-light: #D0D0D0;
   --secondary-lighter: #EEEFEF;
   --black: #000000;
