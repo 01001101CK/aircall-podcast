@@ -82,64 +82,95 @@
     z-index: 2;
 }
 
-
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 48px 0 0 0;
-    min-height: 400px;
-  }
-  .heroContent {
-    margin-left: 32px;
-    max-width: 100%;
-  }
-  .heroImages {
-    margin-right: 32px;
-    min-width: 260px;
-    min-height: 180px;
-  }
-  .cardLeft {
-    width: 90px;
-    height: 90px;
-  }
-  .cardCenter {
-    width: 150px;
-    height: 150px;
-  }
-  .cardRight {
-    width: 110px;
-    height: 110px;
-  }
+.podcastLinksMobile {
+  display: none;
 }
 
-
-@media (max-width: 700px) {
+@media (max-width: 376px) {
   .hero {
-    padding: 32px 0 0 0;
-    min-height: 320px;
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    max-width: 311px;
+    margin: 0px auto;
+    padding-top: 24px;
   }
-  .title {
-    font-size: 32px;
-  }
+
   .heroContent {
-    margin-left: 16px;
+    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 10px;
   }
+
+  .title {
+    font-size: 27px;
+    line-height: 39px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .subscribeLabel {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  .podcastLinks {
+    display: none;
+  }
+
+  .podcastLinksMobile {
+    display: flex;
+    gap: 26px;
+    margin-top: 24px;
+    align-items: center;
+  }
+
+  .podcastLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
   .heroImages {
-    margin-right: 16px;
-    min-width: 120px;
-    min-height: 80px;
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
   }
-  .cardLeft {
-    width: 50px;
-    height: 50px;
+
+  .imageLeft {
+    width: 150px;
+    height: 150px;
+    left: -5px;
+    bottom: 45px;
   }
-  .cardCenter {
-    width: 80px;
-    height: 80px;
+
+  .imageCenter {
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
   }
-  .cardRight {
-    width: 60px;
-    height: 60px;
+
+  .imageRight {
+    width: 175px;
+    height: 175px;
+    right: -20px;
+    bottom: 20px;
   }
 } 

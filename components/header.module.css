@@ -136,13 +136,13 @@
     display: none;
 }
 
-@media (max-width: 374px) {
+@media (max-width: 376px) {
     .mobileHeader {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 1.5rem 1rem;
+        padding: 24px 64px;
         background: var(--background);
     }
     .logoGroup {
