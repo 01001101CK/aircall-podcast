@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
+    <div className={styles.pageGradientBg}>
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={styles.title}>
@@ -30,6 +31,8 @@ export default function Hero() {
               <Image className={styles.imageCenter} src="/Female-Blue.png" alt="Podcast 2" width={354} height={354} />
               <Image className={styles.imageRight} src="/Male-pink.png" alt="Podcast 3" width={299} height={299} />
       </div>
+          <div className={styles.pageGradientBg}></div>
     </section>
+      </div>
   );
 } 

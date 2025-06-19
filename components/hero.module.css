@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+.pageGradientBg {
+  background: linear-gradient(180deg, #E4F2F8 0%, #E4F2F8 0%, #E4F2F8 0%, rgba(228, 242, 248, 0) 100%);
+}
+
 .heroContent {
   flex: 1 1 50%;
 }
@@ -108,6 +112,7 @@
     height: 110px;
   }
 }
+
 
 @media (max-width: 700px) {
   .hero {
