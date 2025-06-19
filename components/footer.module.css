@@ -1,5 +1,6 @@
 .footer {
   font-family: inherit;
+  border-top: 1px solid var(--gray-stroke);
 }
 
 .footerTop {
@@ -57,12 +58,9 @@
 }
 
 .footerCol a {
-  color: #181c32;
-  text-decoration: none;
   font-size: 14px;
   font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0.02em;
+  line-height: 1rem;
   margin-bottom: 2px;
   display: flex;
   align-items: center;
@@ -77,13 +75,20 @@
   gap: 6px;
 }
 .statusBadge {
-  background: #e4e8eb;
-  color: #7b8ca6;
-  font-size: 0.75rem;
+  background: var(--gray-50);
+  color: var(--gray-dark);
+  width: 36px;
+  height: 17px;
+  border-radius: 2px;
+  opacity: 0.5;
+  color: var(--gray-dark);
+  font-size: 9px;
   font-weight: 600;
-  border-radius: 4px;
+  line-height: 24px;
   padding: 2px 6px;
-  margin-left: 2px;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
 }
 
 .jobsRow {
@@ -92,13 +97,16 @@
   gap: 6px;
 }
 .hiringBadge {
-  background: #ffe3d1;
-  color: #ff7a1a;
-  font-size: 0.75rem;
+  width: 65px;
+  height: 24px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 9px;
   font-weight: 600;
-  border-radius: 4px;
-  padding: 2px 8px;
-  margin-left: 2px;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
 }
 
 .linkIcon {
@@ -106,7 +114,7 @@
 }
 
 .footerBottom {
-  border-top: 1px solid #e4e8eb;
+  border-top: 1px solid var(--gray-stroke);
   margin-top: 40px;
   padding: 24px 0 0 0;
   display: flex;
@@ -122,20 +130,20 @@
   display: flex;
   align-items: center;
   gap: 28px;
-  color: #bfc9d9;
-  font-size: 0.98rem;
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
   margin-left: 32px;
 }
-.legalLinks a {
-  color: #7b8ca6;
-  text-decoration: none;
-  font-size: 0.98rem;
+.legalLinks span {
+  opacity: 0.4;
 }
 
 .socialLinks {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   margin-right: 32px;
 }
 .socialLinks a {
@@ -144,12 +152,8 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: #f2f4f8;
   border-radius: 50%;
-  transition: background 0.2s;
-}
-.socialLinks a:hover {
-  background: #e4e8eb;
+
 }
 
 @media (max-width: 1100px) {

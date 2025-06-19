@@ -10,7 +10,7 @@
 }
 
 .pageGradientBg {
-  background: linear-gradient(180deg, #E4F2F8 0%, #E4F2F8 0%, #E4F2F8 0%, rgba(228, 242, 248, 0) 100%);
+  background: var(--gradient-hero-bg);
 }
 
 .heroContent {

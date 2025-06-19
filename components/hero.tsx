@@ -27,9 +27,9 @@ export default function Hero() {
         </div>
       </div>
       <div className={styles.heroImages}>
-              <Image className={styles.imageLeft} src="/Female-Yellow.png" alt="Podcast 1" width={250} height={250}/>
-              <Image className={styles.imageCenter} src="/Female-Blue.png" alt="Podcast 2" width={354} height={354} />
-              <Image className={styles.imageRight} src="/Male-pink.png" alt="Podcast 3" width={299} height={299} />
+              <Image className={styles.imageLeft} src="/Female-Yellow.png" alt="Podcast 1" width={250} height={250} loading="eager"/>
+              <Image className={styles.imageCenter} src="/Female-Blue.png" alt="Podcast 2" width={354} height={354} loading="eager"/>
+              <Image className={styles.imageRight} src="/Male-pink.png" alt="Podcast 3" width={299} height={299} loading="eager"/>
       </div>
           <div className={styles.pageGradientBg}></div>
     </section>

@@ -59,7 +59,9 @@
   --gray-light: #D3D5DC;
   --gray-dark: #101820;
   --gray-30: #7B8CA6;
+  --gray-stroke: #979797;
   --gray-50: #D9D9D680; 
+  --gray-50-rgb: 228, 242, 248;
   --accent: #E68354;
   --accent-light: #FFF0E8;
   --white: #FFFFFF;
@@ -68,6 +70,7 @@
   --pink: #FF7B7B;
   --green: #00B388;
   --font-fellix: 'Fellix', sans-serif;
+  --gradient-hero-bg: linear-gradient(180deg, #E4F2F8 0%, #E4F2F8 0%, #E4F2F8 0%, rgba(228, 242, 248, 0) 100%);
 }
 
 @theme inline {

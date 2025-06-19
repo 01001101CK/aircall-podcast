@@ -23,7 +23,7 @@ export default function LatestReleases() {
         <div className={styles.releasesGrid}>
           <article className={styles.releaseCard}>
             <div className={styles.cardImageWrapper}>
-                <Image src="/podcast1.png" alt="The Power of Conversation" fill className={styles.cardImage} />
+                          <Image src="/podcast1.png" alt="The Power of Conversation" fill className={styles.cardImage} loading="eager" />
             </div>
             <div className={styles.cardMeta}>
               <span className={styles.cardMetaEpisode}>S01E01</span>
@@ -37,7 +37,7 @@ export default function LatestReleases() {
           </article>
           <article className={styles.releaseCard}>
             <div className={styles.cardImageWrapper}>
-                <Image src="/podcast2.png" alt="The Power of Conversation" fill className={styles.cardImage} />
+                          <Image src="/podcast2.png" alt="The Power of Conversation" fill className={styles.cardImage} loading="eager" />
             </div>
             <div className={styles.cardMeta}>
               <span className={styles.cardMetaEpisode}>S01E01</span>
