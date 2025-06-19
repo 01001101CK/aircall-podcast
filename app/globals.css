@@ -57,11 +57,15 @@
   --black: #000000;
   --gray: #D9D9D6;
   --gray-light: #D3D5DC;
+  --gray-30: #7B8CA6;
   --gray-50: #D9D9D680; 
   --accent: #E68354;
   --accent-light: #FFF0E8;
   --white: #FFFFFF;
   --white-70: #FFFFFFB3; 
+  --blue: #345BC2;
+  --pink: #FF7B7B;
+  --green: #00B388;
   --font-fellix: 'Fellix', sans-serif;
 }
 
