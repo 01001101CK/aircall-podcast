@@ -5,16 +5,21 @@ import Search from "@/components/search";
 import Hero from "@/components/hero";
 import LatestReleases from "@/components/latest-releases";
 import LatestBlogsSection from "@/components/latest-blogs-section";
+import { SearchProvider } from "@/contexts/SearchContext";
+import { blogs } from "@/data/blogs";
+import { podcasts } from "@/data/podcasts";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <Search />
-      <Hero />
-      <LatestReleases />
-      <LatestBlogsSection />
-      <Footer />
-    </div>
+    <SearchProvider blogs={blogs} podcasts={podcasts}>
+      <div>
+        <Header />
+        <Search />
+        <Hero />
+        <LatestReleases />
+        <LatestBlogsSection />
+        <Footer />
+      </div>
+    </SearchProvider>
   );
 }

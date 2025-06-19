@@ -1,11 +1,16 @@
 "use client";
 import Link from 'next/link';
-import styles from './header.module.css';
+import styles from '../styles/components/header.module.css';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     return (
         <header className={styles.header}>
@@ -23,7 +28,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Modal Menu */}
-            {menuOpen && (
+            {mounted && menuOpen && (
                 <div className={styles.mobileMenuOverlay} onClick={() => setMenuOpen(false)}>
                     <div className={styles.mobileMenu} onClick={e => e.stopPropagation()}>
                         <button
