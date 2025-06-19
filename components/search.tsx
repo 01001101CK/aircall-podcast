@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 export default function SearchBar() {
     return (
+        <div className={styles.searchContainer}>
         <div className={styles.searchBarContainer}>
             <nav className={styles.filterNav}>
                 <a className={styles.filterLink}>All</a>
@@ -18,6 +19,7 @@ export default function SearchBar() {
             <button className={styles.searchButton} aria-label="Search">
                 <Image src="/search.svg" alt="Search" width={28} height={28} />
             </button>
+        </div>
         </div>
     );
 } 

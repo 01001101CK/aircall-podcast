@@ -56,16 +56,16 @@ export default function Header() {
             </div>
             <div className={styles.divider}></div>
             <div className={styles.container}>
+                <Image className={styles.logo} src="/logo.svg" alt="Aircall Logo" width={139.81} height={40} />
                 <nav className={styles.nav}>
-                    <Image src="/logo.svg" alt="Aircall Logo" width={139.81} height={40} />
                     <Link href="#" className={styles.navLink}>Why Aircall <Image src="/down_arrow.svg" alt="Down Arrow" width={5} height={5} /></Link>
                     <Link href="#" className={styles.navLink}>Solutions<Image src="/down_arrow.svg" alt="Down Arrow" width={5} height={5} /></Link>
                     <Link href="#" className={styles.navLink}>Pricing<Image src="/down_arrow.svg" alt="Down Arrow" width={5} height={5} /></Link>
                     <Link href="#" className={styles.navLink}>Ressources<Image src="/down_arrow.svg" alt="Down Arrow" width={5} height={5} /></Link>
                     <Link href="#" className={styles.navLink}>Partners<Image src="/down_arrow.svg" alt="Down Arrow" width={5} height={5} /></Link>
                     <Link href="#" className={styles.navLink}>Company<Image src="/down_arrow.svg" alt="Down Arrow" width={5} height={5} /></Link>
-                    <Link href="#" className={styles.tryButton}>Try for free</Link>
                 </nav>
+                <Link href="#" className={styles.tryButton}>Try for free</Link>
             </div>
         </header>
     );

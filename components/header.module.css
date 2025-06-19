@@ -15,6 +15,10 @@
     max-width: 1062px;
 }
 
+.logo {
+    margin-right: 2.5rem;
+}
+
 .logoGroup {
     display: flex;
     align-items: center;
@@ -25,8 +29,7 @@
 .nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    flex: 1 1 auto;
+    gap: 1.5rem;
     justify-content: space-between;
 }
 
@@ -106,11 +109,9 @@
     text-decoration: none;
     border: none;
     transition: background 0.2s;
+    margin-left: 8rem;
 }
 
-.tryButton:hover {
-    background: var(--primary-dark);
-}
 
 .divider {
     width: 100vw;
