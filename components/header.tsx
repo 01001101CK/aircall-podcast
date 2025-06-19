@@ -12,6 +12,33 @@ export default function Header() {
         setMounted(true);
     }, []);
 
+    // Prevent hydration mismatch by not rendering interactive elements until mounted
+    const renderMobileMenu = () => {
+        if (!mounted) return null;
+        
+        return menuOpen ? (
+            <div className={styles.mobileMenuOverlay} onClick={() => setMenuOpen(false)}>
+                <div className={styles.mobileMenu} onClick={e => e.stopPropagation()}>
+                    <button
+                        className={styles.closeButton}
+                        aria-label="Close menu"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        &times;
+                    </button>
+                    <nav className={styles.mobileNav}>
+                        <Link href="#" className={styles.mobileNavLink}>Why Aircall</Link>
+                        <Link href="#" className={styles.mobileNavLink}>Solutions</Link>
+                        <Link href="#" className={styles.mobileNavLink}>Pricing</Link>
+                        <Link href="#" className={styles.mobileNavLink}>Resources</Link>
+                        <Link href="#" className={styles.mobileNavLink}>Partners</Link>
+                        <Link href="#" className={styles.mobileNavLink}>Company</Link>
+                    </nav>
+                </div>
+            </div>
+        ) : null;
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.mobileHeader}>
@@ -22,33 +49,14 @@ export default function Header() {
                     className={styles.menuButton}
                     aria-label="Open menu"
                     onClick={() => setMenuOpen(true)}
+                    disabled={!mounted}
                 >
                     <Image src="/hamburger-menu.svg" alt="Menu" width={65} height={19} />
                 </button>
             </div>
 
             {/* Mobile Modal Menu */}
-            {mounted && menuOpen && (
-                <div className={styles.mobileMenuOverlay} onClick={() => setMenuOpen(false)}>
-                    <div className={styles.mobileMenu} onClick={e => e.stopPropagation()}>
-                        <button
-                            className={styles.closeButton}
-                            aria-label="Close menu"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            &times;
-                        </button>
-                        <nav className={styles.mobileNav}>
-                            <Link href="#" className={styles.mobileNavLink}>Why Aircall</Link>
-                            <Link href="#" className={styles.mobileNavLink}>Solutions</Link>
-                            <Link href="#" className={styles.mobileNavLink}>Pricing</Link>
-                            <Link href="#" className={styles.mobileNavLink}>Resources</Link>
-                            <Link href="#" className={styles.mobileNavLink}>Partners</Link>
-                            <Link href="#" className={styles.mobileNavLink}>Company</Link>
-                        </nav>
-                    </div>
-                </div>
-            )}
+            {renderMobileMenu()}
 
             <div className={styles.actions}>
                 <span className={styles.phone}>+1 888 240 6923</span>

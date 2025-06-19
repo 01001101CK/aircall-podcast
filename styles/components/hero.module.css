@@ -63,14 +63,14 @@
 
 .imageLeft {
   position: absolute;
-  left: 35px;
-  bottom: 0;
+  left: 20px;
+  bottom: -30;
   z-index: 2;
 }
 
 .imageCenter {
   position: absolute;
-  left: 110px;
+  left: 80px;
   top: 0;
   z-index: 1;
 }
@@ -78,7 +78,7 @@
 .imageRight {
     position: absolute;
     right: -140px;
-    bottom: -65px;
+    bottom: -75px;
     z-index: 2;
 }
 
