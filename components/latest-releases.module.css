@@ -1,0 +1,187 @@
+.latestReleasesMain {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.latestReleasesSection {
+  max-width: 1062px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  color: var(--primary-dark-2);
+}
+
+.sortButton {
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--foreground);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--background-secondary);
+  width: 136px;
+  height: 44px;
+}
+
+.releasesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.releaseCard {
+  position: relative;
+  background: var(--white);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  margin: 16px 0 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--secondary-medium);
+  letter-spacing: 0.02em;
+}
+
+.cardMetaEpisode,
+.cardMetaDuration {
+  opacity: 0.7;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 12px 0 0 0;
+  line-height: 1.3;
+  width: 100%;
+}
+
+.cardListenRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 16px 0 0 0;
+  width: 100%;
+
+}
+
+.cardImageWrapper {
+    width: 248px;
+    height: 248px;
+}
+
+.cardImage {
+    object-fit: cover;
+}
+
+.listenIcon {
+  width: 16px;
+  height: 16px;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.listenText {
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: 0;
+}
+
+.comingSoon {
+  min-height: 340px;
+  padding-top: 20px;
+}
+
+.comingSoonText {
+  color: var(--gray-light);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+}
+
+.comingSoonPlaceholderLong {
+  height: 20px;
+  width: 80%;
+  background: var(--background-secondary);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.placeholderImage {
+  background: var(--background-secondary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 248px;
+  height: 248px;
+  position: relative;
+}
+
+.placeholderMetaBlock {
+  width: 114px;
+  height: 23px;
+  background: var(--background-secondary);
+  border-radius: 5px;
+}
+
+.placeholderTitle {
+  width: 234px;
+  height: 23px;
+  background: #f2f4f8;
+  border-radius: 6px;
+  margin: 12px 0 0 0;
+}
+
+
+@media (max-width: 900px) {
+  .releasesGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .latestReleasesSection {
+    padding: 0 8px;
+  }
+  .releasesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .releaseCard, .comingSoon {
+    min-height: 220px;
+  }
+  .cardImageWrapper {
+    height: 120px;
+  }
+} 

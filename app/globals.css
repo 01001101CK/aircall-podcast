@@ -43,10 +43,12 @@
 
 :root {
   --background: #ffffff;
+  --background-secondary: #F1F3F8; 
   --foreground: #171717;
   --background-secondary: #F7F8FC;
   --primary: #00B388;
   --primary-dark: #101820;
+  --primary-dark-2: #101820;
   --primary-light: #ECECEA;
   --secondary: #333333;
   --secondary-medium: #5C6266;
@@ -54,6 +56,7 @@
   --secondary-lighter: #EEEFEF;
   --black: #000000;
   --gray: #D9D9D6;
+  --gray-light: #D3D5DC;
   --gray-50: #D9D9D680; 
   --accent: #E68354;
   --accent-light: #FFF0E8;

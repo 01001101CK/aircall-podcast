@@ -13,6 +13,7 @@
     min-height: 80px;
     width: 100%;
     max-width: 1062px;
+    justify-content: space-between;
 }
 
 .logo {
@@ -99,7 +100,6 @@
 }
 
 .tryButton {
-    margin-left: 0.5rem;
     padding: 0.75rem 1.5rem;
     background: var(--primary);
     color: var(--white);

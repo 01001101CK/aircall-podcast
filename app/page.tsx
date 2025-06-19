@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Search from "@/components/search";
 import Hero from "@/components/hero";
+import LatestReleases from "@/components/latest-releases";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Search />
       <Hero />
+      <LatestReleases />
     </div>
   );
 }
