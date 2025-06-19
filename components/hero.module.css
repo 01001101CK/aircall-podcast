@@ -1,12 +1,12 @@
 .hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 80px 0 0 0;
   min-height: 480px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1062px;    
+  justify-content: center;
   gap: 2rem;
+  margin: 0 auto;
 }
 
 .heroContent {
@@ -52,7 +52,7 @@
 
 .heroImages {
   position: relative;
-  width: 600px;
+  width: 450px;
   height: 380px;
   margin-right: 56px;
 }
@@ -73,7 +73,7 @@
 
 .imageRight {
     position: absolute;
-    right: 0;
+    right: -110px;
     bottom: -65px;
     z-index: 2;
 }
