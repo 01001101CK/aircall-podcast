@@ -6,4 +6,5 @@ export interface Podcast {
   title: string;
   description?: string;
   isComingSoon?: boolean;
+  date: string; // ISO date string for sorting
 } 

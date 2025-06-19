@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useMemo, ReactNode } from 'react';
 import { Blog } from '../types/blog';
 import { Podcast } from '../types/podcast';
 
@@ -8,8 +8,11 @@ interface SearchContextType {
   setSearchQuery: (query: string) => void;
   selectedFilter: string;
   setSelectedFilter: (filter: string) => void;
+  sortBy: string;
+  setSortBy: (sort: string) => void;
   filteredBlogs: Blog[];
   filteredPodcasts: Podcast[];
+  sortedPodcasts: Podcast[];
   isSearching: boolean;
 }
 
@@ -22,6 +25,7 @@ export function SearchProvider({ children, blogs, podcasts }: {
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('All');
+  const [sortBy, setSortBy] = useState('');
 
   // Filter blogs based on search query and filter
   const filteredBlogs = blogs.filter(blog => {
@@ -45,6 +49,29 @@ export function SearchProvider({ children, blogs, podcasts }: {
       (podcast.description && podcast.description.toLowerCase().includes(searchQuery.toLowerCase()));
   });
 
+  // Sort podcasts based on selected sort option
+  const sortedPodcasts = useMemo(() => {
+    const filtered = filteredPodcasts;
+    
+    switch (sortBy) {
+      case 'date':
+        return [...filtered].sort((a, b) => {
+          if (!a.date || !b.date) return 0;
+          return new Date(b.date).getTime() - new Date(a.date).getTime(); // Newest first
+        });
+      case 'title':
+        return [...filtered].sort((a, b) => a.title.localeCompare(b.title));
+      case 'duration':
+        return [...filtered].sort((a, b) => {
+          const aMinutes = parseInt(a.duration.replace('MIN', ''));
+          const bMinutes = parseInt(b.duration.replace('MIN', ''));
+          return aMinutes - bMinutes;
+        });
+      default:
+        return filtered;
+    }
+  }, [filteredPodcasts, sortBy]);
+
   const isSearching = searchQuery.length > 0;
 
   return (
@@ -53,8 +80,11 @@ export function SearchProvider({ children, blogs, podcasts }: {
       setSearchQuery,
       selectedFilter,
       setSelectedFilter,
+      sortBy,
+      setSortBy,
       filteredBlogs,
       filteredPodcasts,
+      sortedPodcasts,
       isSearching
     }}>
       {children}

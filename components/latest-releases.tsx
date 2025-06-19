@@ -4,30 +4,31 @@ import Image from 'next/image';
 import { useSearch } from '../contexts/SearchContext';
 
 export default function LatestReleases() {
-  const { filteredPodcasts, isSearching } = useSearch();
+  const { sortedPodcasts, sortBy, setSortBy, isSearching } = useSearch();
 
   return (
     <main className={styles.latestReleasesMain}>
       <section className={styles.latestReleasesSection}>
         <div className={styles.headerRow}>
           <h2 className={styles.heading}>
-            {isSearching ? `Search Results (${filteredPodcasts.length} podcasts)` : 'The latest releases'}
+            {isSearching ? `Search Results (${sortedPodcasts.length} podcasts)` : 'The latest releases'}
           </h2>
           <label htmlFor="sortSelect" className={styles.sortLabel} style={{display: 'none'}}>Sort by</label>
           <select
             id="sortSelect"
             className={styles.sortButton}
             aria-label="Sort by"
-            defaultValue=""
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
           >
-            <option value="" disabled>Sort by</option>
+            <option value="">Sort by</option>
             <option value="date">Date</option>
             <option value="title">Title</option>
             <option value="duration">Duration</option>
           </select>
         </div>
         <div className={styles.releasesGrid}>
-          {filteredPodcasts.map((podcast) => (
+          {sortedPodcasts.map((podcast) => (
             <article className={styles.releaseCard} key={podcast.id}>
               <div className={styles.cardImageWrapper}>
                 <Image 
