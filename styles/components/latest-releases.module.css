@@ -55,6 +55,7 @@
   cursor: pointer;
   border-radius: 10px;
   overflow: hidden;
+  z-index: 3;
 }
 
 .releaseCard::before {
@@ -67,7 +68,6 @@
   background-color: var(--secondary-light);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  pointer-events: none;
   z-index: 1;
 }
 
@@ -84,14 +84,16 @@
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
 }
 
-.releaseCard:hover::before,
 .releaseCard:hover::after {
   opacity: 0.8;
 }
 
+.cardContent {
+  padding-left: 5px; 
+}
 .cardMeta {
   display: flex;
   gap: 16px;
@@ -143,6 +145,10 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.cardImageWrapper:hover {
+  filter: brightness(50%)
 }
 
 .listenIcon {

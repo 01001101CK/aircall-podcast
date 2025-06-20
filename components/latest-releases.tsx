@@ -40,14 +40,16 @@ export default function LatestReleases() {
                   aria-hidden="true"
                 />
               </div>
-              <div className={styles.cardMeta}>
-                <span className={styles.cardMetaEpisode} aria-label="Episode number">{podcast.episode}</span>
-                <span className={styles.cardMetaDuration} aria-label="Episode duration">{podcast.duration}</span>
-              </div>
-              <h3 className={styles.cardTitle}>{podcast.title}</h3>
-              <div className={styles.cardListenRow}>
-                <Image src="/listen.svg" alt="" width={24} height={24} aria-hidden="true" />
-                <span className={styles.listenText}>Listen now</span>
+              <div className={styles.cardContent}>
+                <div className={styles.cardMeta}>
+                  <span className={styles.cardMetaEpisode} aria-label="Episode number">{podcast.episode}</span>
+                  <span className={styles.cardMetaDuration} aria-label="Episode duration">{podcast.duration}</span>
+                </div>
+                <h3 className={styles.cardTitle}>{podcast.title}</h3>
+                <div className={styles.cardListenRow}>
+                  <Image src="/listen.svg" alt="" width={24} height={24} aria-hidden="true" />
+                  <span className={styles.listenText}>Listen now</span>
+                </div>
               </div>
             </article>
           ))}
