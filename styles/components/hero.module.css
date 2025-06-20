@@ -42,6 +42,7 @@
 .podcastLinks {
   display: flex;
   gap: 32px;
+  
 }
 
 .podcastLink {
@@ -52,6 +53,13 @@
   color: var(--foreground);
   text-decoration: none;
   gap: 8px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.podcastLink:hover {
+  background-color: var(--gray-20); 
 }
 
 .heroImages {
