@@ -7,20 +7,20 @@ export default function LatestBlogsSection() {
   const { filteredBlogs, isSearching } = useSearch();
 
   return (
-    <section className={styles.latestBlogsSection}>
-      <h2 className={styles.sectionTitle}>
+    <section className={styles.latestBlogsSection} aria-labelledby="blogs-heading">
+      <h2 id="blogs-heading" className={styles.sectionTitle}>
         {isSearching ? `Search Results (${filteredBlogs.length} articles)` : 'Discover our latest articles'}
       </h2>
-      <div className={styles.blogsGrid}>
+      <div className={styles.blogsGrid} role="list" aria-label="Blog articles">
         {filteredBlogs.map((blog, idx) => (
-          <article className={styles.blogCard} key={idx}>
+          <article className={styles.blogCard} key={idx} role="listitem">
             <div className={styles.blogImageWrapper}>
-              <Image src={blog.image} alt={blog.title} fill className={styles.blogImage} />
+              <Image src={blog.image} alt="" fill className={styles.blogImage} aria-hidden="true" />
             </div>
             <div className={styles.blogMetaRow}>
-              <span className={styles[blog.categoryKey]}>{blog.category}</span>
-              <span className={styles.metaDot} />
-              <span className={styles.readTime}>{blog.readTime}</span>
+              <span className={styles[blog.categoryKey]} aria-label={`Category: ${blog.category}`}>{blog.category}</span>
+              <span className={styles.metaDot} aria-hidden="true" />
+              <span className={styles.readTime} aria-label={`Reading time: ${blog.readTime}`}>{blog.readTime}</span>
             </div>
             <h3 className={styles.blogTitle}>{blog.title}</h3>
             <p className={styles.blogDescription}>{blog.description}</p>
