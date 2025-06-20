@@ -27,9 +27,9 @@ export default function LatestReleases() {
             <option value="duration">Duration</option>
           </select>
         </div>
-        <div className={styles.releasesGrid} role="list" aria-label="Podcast episodes">
+        <div className={styles.releasesGrid} aria-label="Podcast episodes">
           {sortedPodcasts.map((podcast) => (
-            <article className={styles.releaseCard} key={podcast.id} role="listitem">
+            <article className={styles.releaseCard} key={podcast.id}>
               <div className={styles.cardImageWrapper}>
                 <Image 
                   src={podcast.image} 
@@ -53,7 +53,7 @@ export default function LatestReleases() {
           ))}
           {!isSearching && (
             <>
-              <article className={styles.releaseCard + ' ' + styles.comingSoon} role="listitem" aria-label="Coming soon podcast">
+              <article className={styles.releaseCard + ' ' + styles.comingSoon} aria-label="Coming soon podcast">
                 <div className={styles.cardImageWrapper + ' ' + styles.placeholderImage}>
                   <span className={styles.comingSoonText}>Coming soon</span>
                 </div>
@@ -62,7 +62,7 @@ export default function LatestReleases() {
                 </div>
                 <div className={styles.cardTitle + ' ' + styles.placeholderTitle} />
               </article>
-              <article className={styles.releaseCard + ' ' + styles.comingSoon} role="listitem" aria-label="Coming soon podcast">
+              <article className={styles.releaseCard + ' ' + styles.comingSoon} aria-label="Coming soon podcast">
                 <div className={styles.cardImageWrapper + ' ' + styles.placeholderImage}>
                   <span className={styles.comingSoonText}>Coming soon</span>
                 </div>

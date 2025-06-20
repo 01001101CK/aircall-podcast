@@ -11,9 +11,9 @@ export default function LatestBlogsSection() {
       <h2 id="blogs-heading" className={styles.sectionTitle}>
         {isSearching ? `Search Results (${filteredBlogs.length} articles)` : 'Discover our latest articles'}
       </h2>
-      <div className={styles.blogsGrid} role="list" aria-label="Blog articles">
+      <div className={styles.blogsGrid} aria-label="Blog articles">
         {filteredBlogs.map((blog, idx) => (
-          <article className={styles.blogCard} key={idx} role="listitem">
+          <article className={styles.blogCard} key={idx}>
             <div className={styles.blogImageWrapper}>
               <Image src={blog.image} alt="" fill className={styles.blogImage} aria-hidden="true" />
             </div>
